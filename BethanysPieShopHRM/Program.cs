@@ -1,3 +1,7 @@
+global using BethanysPieShopHRM.Shared.Domain;
+global using BethanysPieShopHRM.Models;
+
+
 using BethanysPieShopHRM;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
