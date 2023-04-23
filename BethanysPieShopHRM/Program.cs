@@ -1,5 +1,5 @@
 global using BethanysPieShopHRM.Shared.Domain;
-global using BethanysPieShopHRM.Models;
+
 
 
 using BethanysPieShopHRM;

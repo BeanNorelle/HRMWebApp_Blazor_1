@@ -1,17 +1,8 @@
 ﻿@page "/employeeoverview"
-
+<PageTitle>@Title</PageTitle>
 <h2>Employee Overview</h2>
 
 
-@code
-{
-    public List<Employee>? Employees { get; set; } = default!;
-
-    protected override void OnInitialized()
-    {
-        Employees = MockDataService.Employees;
-    }
-}
 
 @if (Employees == null)
 {
@@ -19,14 +10,14 @@
 }
 else
 {
-    
+    <QuickViewPopup Employee="_selectedEmployee"></QuickViewPopup>
     <div class="row">
         @foreach (var employee in Employees)
         {
             <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 col-xxl-2">
                 <ErrorBoundary>
                     <ChildContent>
-                        <EmployeeCard Employee="employee"></EmployeeCard>
+                        <EmployeeCard Employee="employee" EmployeeQuickViewClicked="ShowQuickViewPopup"></EmployeeCard>
                     </ChildContent>
                     <ErrorContent>
                         <p class="errorUI">Invalid employee!</p>

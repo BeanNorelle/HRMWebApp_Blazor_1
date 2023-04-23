@@ -4,5 +4,10 @@
 
 <h1>Welcome to Bethany's Pie Ship HRM!</h1>
 
-USING THIS APPLICATON, YOU CAN MANAGE OUR WONDERFUL STAFF WORKING FO US ALL OVER THE WORLD, BRINGING PEOPLE HE BEST PIES EVER!
+<h2>Welcome!</h2>
+<br/>
 
+@foreach(var widgetType in Widgets)
+{
+    <DynamicComponent Type="widgetType"></DynamicComponent>
+}
